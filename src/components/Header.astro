@@ -1,12 +1,18 @@
 ---
 import Navigation from "./Navigation.astro";
+import LogoDarkMode from "../../public/assets/logo/LogoDarkMode.svg"
 ---
 
 <div class="header-logo">
   <a href="">
-    <img src="" alt="" />
+    <img src={LogoDarkMode.src} alt="" />
   </a>
 </div>
 <Navigation />
 
-<style></style>
+<style>
+
+    .header-logo img {
+        width: 250px;
+    }
+</style>
