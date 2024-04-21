@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Jura", sans-serif;
+}
+
+body {
+    padding: 1.5rem;
+    margin: 0 auto;
+    max-width: 140ch;
+    width: 100%;
+    background: #0f0f0f;
+   
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
