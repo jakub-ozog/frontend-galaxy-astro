@@ -11,13 +11,14 @@ const {pageTitle} = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Frontend Planet | Home</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <header>
             <Header />
         </header>
         <h1>{pageTitle}</h1>
+		<slot />
 	</body>
 </html>
 
