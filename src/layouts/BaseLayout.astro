@@ -1,24 +1,31 @@
 ---
 import Header from "../components/Header.astro";
-
-const {pageTitle} = Astro.props;
+import "../styles/global.css";
+const { pageTitle } = Astro.props;
 ---
 
-
 <html lang="pl">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-        <header>
-            <Header />
-        </header>
-        <h1>{pageTitle}</h1>
-		<slot />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   
+      <Header />
+    
+    <h1>{pageTitle}</h1>
+    <slot />
+  </body>
 </html>
 
+
+<style></style>
