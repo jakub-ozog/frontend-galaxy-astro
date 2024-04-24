@@ -1,8 +1,32 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
-const pageTitle = " Frontend Galaxy | Home"
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = " Frontend Galaxy | Home";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-<h1>Welcome to Frontend Galaxy!</h1>
+  <main>
+    <div class="hero">
+      <h1>
+        Odkryj ze mną niezwykły świat <br /> Frontendu na <span
+          class="logo-font">FrontendGalaxy</span
+        >
+      </h1>
+    </div>
+  </main>
 </BaseLayout>
+
+<style>
+  .hero h1 {
+    color: var(--standard-white);
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 5rem;
+  }
+
+  .logo-font {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 2em;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+}
+</style>
