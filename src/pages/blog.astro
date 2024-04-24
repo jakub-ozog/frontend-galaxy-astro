@@ -5,14 +5,18 @@ import BlogPost from "../components/BlogPost.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
 
 const pageTitle = " Frontend Galaxy | Blog";
+
+console.log(allPosts);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <h1>Blog</h1>
 
-  {
-    allPosts.map((post) => {
-      <BlogPost url={post.url} title={post.frontmatter.title} />
-    })
-  }
+  <ul>
+    {
+      allPosts.map((post) => (
+        <BlogPost url={post.url} title={post.frontmatter.title} />
+      ))
+    }
+  </ul>
 </BaseLayout>
