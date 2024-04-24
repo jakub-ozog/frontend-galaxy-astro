@@ -1,3 +1,11 @@
+:root {
+    --standard-white: hsl(0, 0%, 100%);
+    --standard-black: hsl(0, 0%, 0%);
+    --accent-green: hsl(143, 68%, 40%);
+    --accent-violet:hsl(269, 75%, 53%);
+}
+
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -6,11 +14,11 @@
 }
 
 body {
-    padding: 1.5rem;
+    padding: 1.5rem 2rem;
     margin: 0 auto;
     max-width: 140ch;
     width: 100%;
-    background: #0f0f0f;
+    background: var(--standard-black);
    
 }
 
