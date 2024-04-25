@@ -1,26 +1,41 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LastThreeArticles from "../components/LastThreeArticles.astro";
+import HeroGalaxy from "../../public/assets/logo/fg_galaxy.svg";
 const pageTitle = " Frontend Galaxy | Home";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <main>
-    <div class="hero">
-      <h1>
-        Odkryj ze mną niezwykły świat <br /> Frontendu na <span
-          class="logo-font">FrontendGalaxy</span
-        >
-      </h1>
-    </div>
+    <section class="hero-section">
+      <div class="hero-title">
+        <h1>
+          Odkryj ze mną niezwykły świat <br /> Frontendu na <span
+            class="logo-font">FrontendGalaxy</span
+          >
+        </h1>
+      </div>
+      <div class="hero-img">
+        <img src={HeroGalaxy.src} alt="" />
+      </div>
+    </section>
   </main>
+
+  <LastThreeArticles />
+ 
 </BaseLayout>
 
 <style>
-  .hero h1 {
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero-title h1 {
     color: var(--standard-white);
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 500;
-    line-height: 5rem;
+    line-height: 4rem;
   }
 
   .logo-font {
@@ -28,5 +43,9 @@ const pageTitle = " Frontend Galaxy | Home";
     font-size: 2em;
     text-decoration: underline;
     text-decoration-thickness: 5px;
-}
+  }
+
+  .hero-img img {
+    width: 400px;
+  }
 </style>
