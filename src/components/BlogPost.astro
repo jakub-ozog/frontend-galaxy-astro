@@ -1,6 +1,5 @@
 ---
-const allPosts = await Astro.glob("../pages/posts/*.md")
-const {url, title} = Astro.props
+const {url, title, description, author, pubDate} = Astro.props
 ---
 
 <li>

@@ -14,9 +14,9 @@
 }
 
 body {
-    padding: 1.5rem 2rem;
+    padding: 2rem 2.5rem;
     margin: 0 auto;
-    max-width: 140ch;
+    max-width: 1440px;
     width: 100%;
     background: var(--standard-black);
    

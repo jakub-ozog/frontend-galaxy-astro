@@ -1,0 +1,27 @@
+---
+import BlogPost from "./BlogPost.astro";
+const allPosts = await Astro.glob("../pages/posts/*.md");
+
+const lastThreeArticles = allPosts.slice(-3);
+---
+
+<section class="latest-articles">
+  <div class="articles-wrapper">
+    <div class="article-single">
+      {
+       lastThreeArticles.map((post) => (
+        <BlogPost url={post.url} title={post.frontmatter.title} />
+       ))
+      }
+    </div>
+  </div>
+</section>
+
+
+
+
+<style>
+  * {
+    color: white;
+  }
+</style>
