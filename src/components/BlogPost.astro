@@ -1,7 +1,29 @@
 ---
-const {url, title, description, author, pubDate} = Astro.props
+const { url, title, description, author, pubDate, customClass } = Astro.props;
 ---
 
-<li>
-    <a href={`${url}`}>{`${title}`}</a>
-</li>
+<a class={customClass} href={`${url}`}
+  >{`${title}`}
+  <p>
+    {description}
+  </p>
+</a>
+
+<style>
+  .article-box {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+  }
+
+  .article-box:hover {
+    border: 1px dashed white;
+  }
+
+ .article-box > p {
+  font-size: 1rem;
+  margin-top: 1.25rem;
+ }
+
+</style>

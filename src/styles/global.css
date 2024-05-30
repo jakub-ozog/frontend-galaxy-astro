@@ -11,6 +11,7 @@
     padding: 0;
     margin: 0;
     font-family: "Jura", sans-serif;
+    color: var(--standard-white)
 }
 
 body {
@@ -26,3 +27,7 @@ a {
     text-decoration: none;
     color: unset;
 }
+
+li {
+    list-style-type: none;
+  }
