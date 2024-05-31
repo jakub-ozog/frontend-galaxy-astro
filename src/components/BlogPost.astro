@@ -1,13 +1,22 @@
 ---
-const { url, title, description, author, pubDate, customClass } = Astro.props;
+const {
+  url,
+  title,
+  description,
+  author,
+  pubDate,
+  customClass,
+} = Astro.props;
 ---
 
-<a class={customClass} href={`${url}`}
-  >{`${title}`}
-  <p>
-    {description}
-  </p>
-</a>
+
+  <a class={customClass} href={`${url}`}
+    >{`${title}`}
+    <p class={customClass}>
+      {description}
+    </p>
+  </a>
+
 
 <style>
   .article-box {
@@ -21,9 +30,18 @@ const { url, title, description, author, pubDate, customClass } = Astro.props;
     border: 1px dashed white;
   }
 
- .article-box > p {
-  font-size: 1rem;
-  margin-top: 1.25rem;
- }
+  .article-box > p {
+    font-size: 1rem;
+    margin-top: 1.25rem;
+  }
 
+  .blog-list-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .blog-list-title > p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
 </style>
