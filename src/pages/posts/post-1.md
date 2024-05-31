@@ -1,7 +1,7 @@
 ---
 title: "Hoisting - czyli dlaczego jest nam tak potrzebny?"
 pubDate: 21-04-2024
-description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, fugiat recusandae! Earum sequi delectus aliquid minus autem odio,"
+description: "Dowiedz się, jak hoisting wpływa na wykonanie Twojego kodu, jak możesz wykorzystać ten mechanizm na swoją korzyść, oraz co się dzieje \"za kulisami\" interpretera JavaScript"
 author: Jakub
 tags: ['javascript', 'hoisting']
 ---
@@ -9,4 +9,4 @@ tags: ['javascript', 'hoisting']
 
 ## Hoisting
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, fugiat recusandae! Earum sequi delectus aliquid.minus autem odio, eveniet consequuntur, facilis hic quis eos vero saepe sapiente assumenda dolor voluptatem.
+Dowiedz się, jak hoisting wpływa na wykonanie Twojego kodu, jak możesz wykorzystać ten mechanizm na swoją korzyść, oraz co się dzieje "za kulisami" interpretera JavaScript

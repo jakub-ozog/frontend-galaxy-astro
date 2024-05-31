@@ -16,7 +16,7 @@ const pageTitle = " Frontend Galaxy | Blog";
     
       {
         allPosts.map((post) => (
-          <BlogPost customClass="blog-list-title" url={post.url} title={post.frontmatter.title} description={post.frontmatter.description}/>
+          <BlogPost customClass="blog-list-title" url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} pubDate={post.frontmatter.pubDate}/>
         ))
       }
       
