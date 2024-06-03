@@ -3,7 +3,8 @@
     --standard-black: hsl(0, 0%, 0%);
     --accent-green: hsl(143, 68%, 40%);
     --accent-violet: hsl(269, 75%, 53%);
-    --standard-grey: hsl(0, 0%, 13%);
+    --border-grey: hsl(0, 0%, 7%);
+     --standard-grey: hsl(0, 0%, 13%);
 }
 
 * {

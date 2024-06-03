@@ -1,26 +1,65 @@
 ---
-// BlogPost.astro
 interface BlogPostProps {
   title: string;
   url: string;
   description: string;
   customClass: string;
   author: string;
-  pubDate?: string; // opcjonalna data publikacji
+  tags: string[];
+  pubDate?: string; // optional publication date
 }
 
-const { url, title, description, pubDate } = Astro.props as BlogPostProps;
+const { url, title, description, pubDate, tags } = Astro.props as BlogPostProps;
 ---
 
 <article class="blog-post">
   <h2>
     <a href={url} class="post-title">{title}</a>
   </h2>
-  {pubDate && <p class="post-date">{pubDate}</p>}
+  <!-- {pubDate && <p class="post-date">Data publikacji: {pubDate}</p>} -->
   <p class="post-description">{description}</p>
+
+  <ul class="post-tags">
+    {tags.map((tag) => <li class="post-single-tag">{tag}</li>)}
+  </ul>
+
+  <p class="post-read-more">
+    <a href={url}>Czytaj dalej &rsaquo;</a>
+  </p>
 </article>
 
 <style>
+  .blog-post {
+    margin-bottom: 4rem;
+    border-bottom: 1px solid var(--border-grey);
+    padding: 1rem;
+  }
+
+  .post-title {
+    font-size: 2rem;
+  }
+
+  .post-date {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+  }
+
+  .post-tags {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .post-single-tag {
+    border: 1px solid var(--standard-white);
+    padding: 0.25rem 0.5rem;
+  }
+
+  .post-read-more {
+    margin-top: 2.5rem;
+    text-decoration: underline;
+  }
   .article-box {
     border: 1px solid white;
     border-radius: 10px;
