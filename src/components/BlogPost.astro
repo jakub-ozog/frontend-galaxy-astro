@@ -20,7 +20,7 @@ const { url, title, description, pubDate, tags } = Astro.props as BlogPostProps;
   <p class="post-description">{description}</p>
 
   <ul class="post-tags">
-    {tags.map((tag) => <li class="post-single-tag">{tag}</li>)}
+    {tags?.map((tag) => <li class="post-single-tag">{tag}</li>)}
   </ul>
 
   <p class="post-read-more">
