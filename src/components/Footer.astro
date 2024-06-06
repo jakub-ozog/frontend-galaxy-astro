@@ -1,0 +1,16 @@
+---
+const { year = new Date().getFullYear() } = Astro.props;
+---
+
+<footer>
+  <b>{year}</b> © Frontend Galaxy
+</footer>
+
+<style>
+  footer {
+    background-color: var(--standard-grey);
+    text-align: center;
+    padding: 1rem ;
+    font-size: 0.875rem;
+  }
+</style>

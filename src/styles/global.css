@@ -2,27 +2,47 @@
     --standard-white: hsl(0, 0%, 100%);
     --standard-black: hsl(0, 0%, 0%);
     --accent-green: hsl(143, 68%, 40%);
-    --accent-violet:hsl(269, 75%, 53%);
+    --accent-violet: hsl(269, 75%, 53%);
+    --border-grey: hsl(0, 0%, 7%);
+     --standard-grey: hsl(0, 0%, 13%);
 }
-
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: "Jura", sans-serif;
+    color: var(--standard-white)
 }
 
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background: var(--standard-black);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+
+.container {
     padding: 2rem 2.5rem;
     margin: 0 auto;
     max-width: 1440px;
     width: 100%;
-    background: var(--standard-black);
-   
 }
 
 a {
     text-decoration: none;
     color: unset;
+}
+
+li {
+    list-style-type: none;
 }

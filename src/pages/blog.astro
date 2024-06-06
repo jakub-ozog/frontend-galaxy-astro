@@ -5,17 +5,49 @@ import BlogPost from "../components/BlogPost.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
 
 const pageTitle = " Frontend Galaxy | Blog";
-
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>Blog</h1>
-
-  <ul>
-    {
-      allPosts.map((post) => (
-        <BlogPost url={post.url} title={post.frontmatter.title} />
-      ))
-    }
+  <div class="blog-title-container">
+    <h1>Blog</h1>
+    <h2>Tutaj znajdziesz wszystkie artykuły, które zamieściłem na moim blogu. Miłego czytania!</h2>
+  </div>
+  <ul class="blog-list">
+    
+      {
+        allPosts.map((post) => (
+          <BlogPost customClass="blog-list-title" 
+          url={post.url} 
+          title={post.frontmatter.title} 
+          description={post.frontmatter.description} 
+          pubDate={post.frontmatter.pubDate}
+          tags={post.frontmatter.tags}/>
+        ))
+      }
+      
   </ul>
 </BaseLayout>
+
+<style>
+  .blog-title-container {
+    background-color: rgb(27, 27, 27);
+    margin-bottom: 4rem;
+    padding: 1rem;
+  }
+
+  .blog-title-container h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+
+  .blog-title-container h2 {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .blog-list {
+    display: flex;
+    flex-direction: column;;
+  }
+
+</style>
