@@ -1,9 +1,60 @@
 ---
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import aboutImage from "../../src/images/about_image.jpeg";
 
-import BaseLayout from "../layouts/BaseLayout.astro"
-const pageTitle = " Frontend Galaxy | O mnie"
+const pageTitle = " Frontend Galaxy | O mnie";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-<h1>O mnie</h1>
+  <h1>O mnie</h1>
+
+  <div class="about-wrapper">
+    
+      <h2>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur,
+        consequatur. Quidem consectetur voluptatum cumque facere exercitationem
+        a sunt, ipsa accusantium quas possimus vitae, voluptatem officiis soluta
+        magni dolorum, aut eum. Ut eligendi accusamus qui et beatae alias amet
+        inventore nostrum velit distinctio architecto, laudantium laborum quasi
+        veritatis quas aliquam molestiae, earum animi consequuntur! Culpa unde
+        officia sunt quae velit natus. Amet, dolorem? Id tempore, doloremque
+        sapiente assumenda, unde illo commodi iure odit distinctio praesentium
+        porro aut consectetur odio. Reprehenderit dignissimos quas repellendus
+        rem totam voluptates impedit laboriosam eveniet est nisi? Accusamus,
+        laboriosam doloribus consequuntur sunt asperiores nobis suscipit
+        doloremque impedit earum. Aspernatur nulla, corrupti animi repellendus
+        corporis neque adipisci dolor architecto vitae ut accusamus, vel hic
+        tempora aliquid. Voluptas, nostrum. Provident velit excepturi aliquam
+        iste voluptatum quidem suscipit odio asperiores quam dolorum vel
+        aspernatur doloremque nostrum qui, harum animi repellendus at aperiam
+        soluta. Corporis nihil a quas dolorem. Aliquid, dolores! Dolor impedit,
+        blanditiis consequatur harum fugit officiis sapiente consequuntur
+        temporibus aspernatur, recusandae reprehenderit laudantium ipsum tenetur
+        cum laboriosam, suscipit facere debitis architecto iste commodi
+        quibusdam delectus. Facilis quibusdam voluptatum odio. Laborum sint a
+        unde perspiciatis. Officiis vel laboriosam quibusdam officia aperiam
+        iusto illo a eos sequi et quae perferendis nam minima odio optio
+        voluptas, esse ipsum quo labore mollitia quos?
+      </h2>
+  
+
+    <Image
+      class="about-photo"
+      src={aboutImage}
+      alt="About image of the author with the fish"
+    />
+  </div>
 </BaseLayout>
+
+<style>
+  .about-wrapper {
+    display: flex;
+  }
+
+  .about-photo  {
+    width: 100%;
+    max-width: 650px;
+    height: 100%;
+  }
+</style>
