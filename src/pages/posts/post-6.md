@@ -1,5 +1,6 @@
 ---
 title: "Podstawy animacji z użyciem CSS"
+slugs: 'dlaczego-hoisting'
 pubDate: 09-06-2024
 description: "Jak używać transition i animation w CSS do tworzenia płynnych animacji, które mogą zwiększyć atrakcyjność wizualną strony."
 author: Jakub

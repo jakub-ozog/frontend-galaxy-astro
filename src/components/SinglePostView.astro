@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const {content, post} = Astro.props;
+
+console.log(post);
+---
+
+<BaseLayout>
+    <h1>{post.title}</h1>
+    <p>{post.content}</p> 
+  </BaseLayout>

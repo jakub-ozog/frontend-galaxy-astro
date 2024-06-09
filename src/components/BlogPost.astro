@@ -1,15 +1,19 @@
 ---
+
 interface BlogPostProps {
   title: string;
-  url: string;
   description: string;
   customClass: string;
   author: string;
   tags: string[];
+  slug: string;
   pubDate?: string; // optional publication date
 }
 
-const { url, title, description, pubDate, tags } = Astro.props as BlogPostProps;
+const {title, description, pubDate, tags, slug } = Astro.props as BlogPostProps;
+const url = `/posts/${slug}`
+
+console.log(slug);
 ---
 
 <article class="blog-post">
@@ -23,8 +27,14 @@ const { url, title, description, pubDate, tags } = Astro.props as BlogPostProps;
     {tags?.map((tag) => <li class="post-single-tag">{tag}</li>)}
   </ul>
 
+  <ul class="post-slug">
+    {slug}
+  </ul>
+  
+
   <p class="post-read-more">
-    <a href={url}>Czytaj dalej &rsaquo;</a>
+    <a href={slug}>Czytaj dalej &rsaquo;</a>
+    
   </p>
 </article>
 

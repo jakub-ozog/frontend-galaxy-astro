@@ -1,5 +1,6 @@
 ---
 title: "Zarządzanie obrazami na stronie"
+slugs: 'dlaczego-hoisting'
 pubDate: 09-06-2024
 description: "Jak wstawić, skalować i stylizować obrazy używając HTML i CSS, włączając w to techniki responsywnego web designu. W tym artykule poruszymy również temat wydajności"
 author: Jakub

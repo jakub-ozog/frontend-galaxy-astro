@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SinglePostView from "../../components/SinglePostView.astro";
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob("../posts/*.md");
+  
+const paths = allPosts.map(post => ({
+  params: {
+    slug: post.frontmatter.slug
+  }
+}))
+
+return {
+  paths: paths
+}
+
+  // return {
+  //   paths: allPosts.map((post) => ({
+  //     params: { 
+  //       slug: post.frontmatter.slug 
+  //     },
+  //   })),
+  //   props: {
+  //     allPosts,
+  //   },
+  // };
+}
+
+const { slug } = Astro.request.params;
+const post = Astro.props.posts.find((p) => p.frontmatter.slug === slug);
+---
+
+<BaseLayout pageTitle={post.frontmatter.title}>
+  <SinglePostView post={post} />
+</BaseLayout>
