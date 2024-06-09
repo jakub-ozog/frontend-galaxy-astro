@@ -1,9 +1,9 @@
 ---
-title: "Async / Await czy moze jednak Promise?"
-pubDate: 21-04-2024
-description: "Porównanie podejść w obsłudze asynchroniczności w JavaScript"
+title: "Flexbox Twoim przyjacielem jest"
+pubDate: 09-06-2024
+description: "Prosty przewodnik po CSS Flexbox czyli narzędzie do tworzenia elastycznych i responsywnych układów."
 author: Jakub
-tags: ['javascript', 'asynchroniczność']
+tags: ['css', 'flexbox']
 ---
 
 

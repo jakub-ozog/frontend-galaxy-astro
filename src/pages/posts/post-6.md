@@ -1,9 +1,9 @@
 ---
-title: "Async / Await czy moze jednak Promise?"
-pubDate: 21-04-2024
-description: "Porównanie podejść w obsłudze asynchroniczności w JavaScript"
+title: "Podstawy animacji z użyciem CSS"
+pubDate: 09-06-2024
+description: "Jak używać transition i animation w CSS do tworzenia płynnych animacji, które mogą zwiększyć atrakcyjność wizualną strony."
 author: Jakub
-tags: ['javascript', 'asynchroniczność']
+tags: ['css', 'animacje']
 ---
 
 
