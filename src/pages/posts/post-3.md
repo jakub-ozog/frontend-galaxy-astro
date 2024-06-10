@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/BlogPostLayout.astro"
 title: "Async / Await czy moze jednak Promise?"
 slugs: 'dlaczego-hoisting'
 pubDate: 21-04-2024

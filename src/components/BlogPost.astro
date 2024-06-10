@@ -7,11 +7,11 @@ interface BlogPostProps {
   author: string;
   tags: string[];
   slug: string;
+  url: string;
   pubDate?: string; // optional publication date
 }
 
-const {title, description, pubDate, tags, slug } = Astro.props as BlogPostProps;
-const url = `/posts/${slug}`
+const {title, description, pubDate, tags, slug, url} = Astro.props as BlogPostProps;
 
 console.log(slug);
 ---

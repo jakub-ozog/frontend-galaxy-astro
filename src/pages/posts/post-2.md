@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/BlogPostLayout.astro"
 title: "Obiekty Proxy w JS"
 slugs: 'dlaczego-proxy'
 pubDate: 21-04-2024
