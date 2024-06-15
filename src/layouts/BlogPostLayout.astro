@@ -1,0 +1,61 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { slugify } from "../js/utils";
+
+const { frontmatter } = Astro.props;
+console.log(frontmatter);
+const { title, description, tags } = frontmatter;
+---
+
+<BaseLayout pageTitle={title}>
+  <header>
+    <div class="container"></div>
+  </header>
+  <div class="post">
+    <div class="post-title">
+      <small>
+        <!-- <a href={`/tags/${slugify(tags)}`} class="post-tags">{tags}</a> -->
+        <ul class="post-tags">
+          {
+            tags?.map((tag) => (
+              <a href={`/tags/${slugify(tag)}`} class="post-single-tag">
+                #{tag}
+              </a>
+            ))
+          }
+        </ul>
+      </small>
+      <h1>
+        {title}
+      </h1>
+    </div>
+    <div class="post-desc">
+      <h2>{description}</h2>
+    </div>
+    <div class="post-content">
+      <slot />
+    </div>
+
+    <div class="sidebar"></div>
+  </div>
+</BaseLayout>
+
+<style>
+  .post-title {
+    margin-bottom: 0.5rem;
+  }
+  .post-title h1 {
+    font-size: 3rem;
+  }
+  .post-desc h2 {
+    font-size: 1.25rem;
+  }
+  .post-content {
+    margin-top: 3rem;
+  }
+
+  .post-tags {
+    display: flex;
+    gap: 1rem;
+  }
+</style>
