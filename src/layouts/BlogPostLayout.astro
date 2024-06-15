@@ -1,46 +1,68 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import { slugify } from "../js/utils";
+import TableOfContents from "../components/TableOfContents.astro";
+import { slugify, formatDate } from "../js/utils";
 
-const { frontmatter } = Astro.props;
+const { frontmatter, headings } = Astro.props;
 console.log(frontmatter);
-const { title, description, tags } = frontmatter;
+const { title, description, tags, pubDate } = frontmatter;
+
+
 ---
 
 <BaseLayout pageTitle={title}>
-  <header>
-    <div class="container"></div>
-  </header>
-  <div class="post">
-    <div class="post-title">
-      <small>
-        <!-- <a href={`/tags/${slugify(tags)}`} class="post-tags">{tags}</a> -->
-        <ul class="post-tags">
-          {
-            tags?.map((tag) => (
-              <a href={`/tags/${slugify(tag)}`} class="post-single-tag">
-                #{tag}
-              </a>
-            ))
-          }
-        </ul>
-      </small>
-      <h1>
-        {title}
-      </h1>
-    </div>
-    <div class="post-desc">
-      <h2>{description}</h2>
-    </div>
-    <div class="post-content">
-      <slot />
-    </div>
+  <div class="post-container">
+    <article>
+      <div class="post-title">
+        <small>
+          <!-- <a href={`/tags/${slugify(tags)}`} class="post-tags">{tags}</a> -->
 
-    <div class="sidebar"></div>
+          <span>Opublikowano · {pubDate}</span>
+        </small>
+        <h1>
+          {title}
+        </h1>
+      </div>
+      <div class="post-desc">
+        <h2>{description}</h2>
+      </div>
+      <hr />
+      <div class="post-content">
+        <slot />
+      </div>
+    </article>
+
+    <aside class="post-sidebar">
+      <h3>Tagi</h3>
+      <ul class="post-tags">
+        {
+          tags?.map((tag) => (
+            <a href={`/tags/${slugify(tag)}/`} class="post-single-tag">
+              #{tag}
+            </a>
+          ))
+        }
+      </ul>
+
+      <div class="post-sidebar-content">
+        <h4>Zawartość na stronie</h4>
+        <TableOfContents headings={headings} />
+        
+      </div>
+    </aside>
   </div>
 </BaseLayout>
 
 <style>
+  .post-container {
+    display: flex;
+    gap: 5rem;
+  }
+
+  article {
+    display: grid;
+    grid-template-columns: 80%;
+  }
   .post-title {
     margin-bottom: 0.5rem;
   }
@@ -51,11 +73,31 @@ const { title, description, tags } = frontmatter;
     font-size: 1.25rem;
   }
   .post-content {
+    line-height: 22px;
     margin-top: 3rem;
+    overflow: visible;
   }
 
   .post-tags {
     display: flex;
     gap: 1rem;
+  }
+
+  hr {
+    border: 1px solid var(--standard-grey);
+    width: 100%;
+  }
+
+  .post-sidebar {
+    position: sticky;
+    top: 3rem;
+    z-index: 10;
+    height: 100%;
+  }
+  .post-sidebar-content {
+    margin-top: 2rem;
+  }
+  .post-sidebar-content h4 {
+    color: var(--accent-grey);
   }
 </style>

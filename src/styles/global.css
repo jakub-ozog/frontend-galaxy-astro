@@ -4,7 +4,9 @@
     --accent-green: hsl(143, 68%, 40%);
     --accent-violet: hsl(269, 75%, 53%);
     --border-grey: hsl(0, 0%, 7%);
-     --standard-grey: hsl(0, 0%, 13%);
+    --standard-grey: hsl(0, 0%, 13%);
+    --accent-grey: hsl(0, 0%, 28%);
+    --light-grey: hsl(0, 0%, 49%);
 }
 
 * {
