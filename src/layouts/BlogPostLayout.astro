@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import { slugify } from "../js/utils";
 
 const { frontmatter } = Astro.props;
 console.log(frontmatter);
@@ -12,9 +13,18 @@ const { title, description, tags } = frontmatter;
   </header>
   <div class="post">
     <div class="post-title">
-        <small>
-            <a href={`/tags/${tags}`} class="post-tags">{tags}</a>
-        </small>
+      <small>
+        <!-- <a href={`/tags/${slugify(tags)}`} class="post-tags">{tags}</a> -->
+        <ul class="post-tags">
+          {
+            tags?.map((tag) => (
+              <a href={`/tags/${slugify(tag)}`} class="post-single-tag">
+                #{tag}
+              </a>
+            ))
+          }
+        </ul>
+      </small>
       <h1>
         {title}
       </h1>
@@ -34,7 +44,7 @@ const { title, description, tags } = frontmatter;
   .post-title {
     margin-bottom: 0.5rem;
   }
-  .post-title h1{
+  .post-title h1 {
     font-size: 3rem;
   }
   .post-desc h2 {
@@ -42,5 +52,10 @@ const { title, description, tags } = frontmatter;
   }
   .post-content {
     margin-top: 3rem;
+  }
+
+  .post-tags {
+    display: flex;
+    gap: 1rem;
   }
 </style>
