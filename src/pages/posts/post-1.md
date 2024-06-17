@@ -8,14 +8,18 @@ author: Jakub
 tags: ["javascript", "hoisting"]
 file: 'C:\Coding\Astro\frontend-galaxy\frontend-galaxy\src\pages\posts\post-1.md'
 ---
+
+
+# Nagłówek 1
 Dowiedz się, jak hoisting wpływa na wykonanie Twojego kodu, jak możesz wykorzystać ten mechanizm na swoją korzyść, oraz co się dzieje "za kulisami" interpretera JavaScript
-
-## Nagłówek 1
-
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos nulla tenetur quis non? Perspiciatis quia, in a at molestiae nulla debitis obcaecati dolor delectus repellat odio doloremque consequuntur, beatae minima!
 Explicabo iure quo tempore vero deserunt reprehenderit saepe ducimus distinctio delectus nihil itaque facilis maxime sed dicta obcaecati reiciendis minima accusamus, a enim quis dignissimos, ad atque ullam molestiae. Sit!
 
-### Podnagłówek 1
+## Podnagłówek 1
+
+Error nesciunt laudantium possimus architecto voluptatibus assumenda velit illum commodi nam praesentium, quisquam nobis officia odio harum impedit ratione dolores! Odit esse molestiae perspiciatis similique corporis animi qui? Deleniti, delectus.
+
+### Podnagłówek 1_2
 
 Error nesciunt laudantium possimus architecto voluptatibus assumenda velit illum commodi nam praesentium, quisquam nobis officia odio harum impedit ratione dolores! Odit esse molestiae perspiciatis similique corporis animi qui? Deleniti, delectus.
 
